@@ -1,7 +1,7 @@
 # Docker wordpress
 
 ## Description:
-Setup docker setup for:
+Docker compose configuration for:
 - Wordpress (latest)
 - MySQL (5.7)
 - phpMyAdmin
@@ -11,11 +11,12 @@ Setup docker setup for:
 
 
 #### Configuration:
-[./config/uploads.ini](./config/uploads.ini) => Server upload and post size  
-[./config/wp-config-sample](./config/wp-config-sample) => Sample wordpress configuration (used )  
-[.env](./.env) => Configure:
 
-| Keys | Descriptions |
+- [./config/uploads.ini](./config/uploads.ini): Server upload and post size  
+
+- [.env](./.env) file:
+
+| Key | Description |
 | ------------- | ------------- |
 | MYSQL_ROOT_PASSWORD | MySQL root password |
 | MYSQL_DATABASE | Wordpress database  |
@@ -27,6 +28,7 @@ Setup docker setup for:
 | DB_PORT | External MySQL ports |
 | PMA_PORT | External phpMyAdmin ports |
 
+
 #### Init (run only once first!)
 ```bash
 chmod +x ./init.sh && ./init.sh
@@ -36,3 +38,7 @@ chmod +x ./init.sh && ./init.sh
 ```bash
 docker-compose up
 ```
+
+# Check:
+- Wordpress => http://localhost:${WP_PORT in .env file}
+- PhpMyAdmin => http://localhost:${PMA_PORT in .env file}
