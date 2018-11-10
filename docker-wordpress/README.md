@@ -39,6 +39,6 @@ chmod +x ./init.sh && ./init.sh
 docker-compose up
 ```
 
-# Check:
-- Wordpress => http://localhost:${WP_PORT in .env file}
-- PhpMyAdmin => http://localhost:${PMA_PORT in .env file}
+# Check in your favorite browser:
+- Wordpress url => localhost: + wordpress port (WP_PORT in .env file)
+- PhpMyAdmin url => localhost: + phpmyadmin port (PMA_PORT in .env file)
